@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment</title>
+</head>
+<body>
+
+    <script>
+        
+        let city = prompt("Enter your city name:");
+        if (city.toLowerCase() === "karachi") {
+            alert("Welcome to the city of lights");
+        } else {
+            alert("Welcome to " + city);
+        }
+
+
+        let gender = prompt("Enter your gender (Male/Female):").toLowerCase();
+        if (gender === "male") {
+            alert("Good Morning Sir.");
+        } else if (gender === "female") {
+            alert("Good Morning Ma'am.");
+        } else {
+            alert("Good Morning!");
+        }
+
+        
+        let signalColor = prompt("Enter the traffic signal color (Red, Yellow, Green):").toLowerCase();
+        if (signalColor === "red") {
+            alert("Must Stop");
+        } else if (signalColor === "yellow") {
+            alert("Ready to move");
+        } else if (signalColor === "green") {
+            alert("Move now");
+        } else {
+            alert("Invalid signal color");
+        }
+
+    
+        let fuel = parseFloat(prompt("Enter remaining fuel in liters:"));
+        if (fuel < 0.25) {
+            alert("Please refill the fuel in your car");
+        } else {
+            alert("You have enough fuel");
+        }
+
+        
+        var a = 4;
+        if (++a === 5) {
+            alert("Given condition for variable a is true");
+        }
+
+    </script>
+
+    <script>
+    
+        if ("car" < "cat") {
+            alert("car is smaller than cat");
+        }
+        
+        var totalMarks = 300
+        
+        
+        var subject1 = parseInt(prompt("Enter marks for Subject 1:"));
+        var subject2 = parseInt(prompt("Enter marks for Subject 2:"));
+        var subject3 = parseInt(prompt("Enter marks for Subject 3:"));
+
+        var obtainedMarks = subject1 + subject2 + subject3;
+        
+        var percentage = (obtainedMarks / totalMarks) * 100;
+
+        var grade, remarks;
+
+        if (percentage >= 80) {
+            grade = "A-one";
+            remarks = "Excellent";
+        } else if (percentage >= 70) {
+            grade = "A";
+            remarks = "Good";
+        } else if (percentage >= 60) {
+            grade = "B";
+            remarks = "You need to improve";
+        } else {
+            grade = "Fail";
+            remarks = "Sorry";
+        }
+
+        document.write("<h2>Marks Sheet</h2>");
+        document.write("Total Marks: " + totalMarks + "<br>");
+        document.write("Marks Obtained: " + obtainedMarks + "<br>");
+        document.write("Percentage: " + percentage.toFixed(2) + "%<br>");
+        document.write("Grade: " + grade + "<br>");
+        document.write("Remarks: " + remarks + "<br>");
+
+    </script>
+
+    <script>
+        
+        var secretNumber = 7; 
+        var userGuess = parseInt(prompt("Guess a number between 1 and 10:"));
+
+        if (userGuess === secretNumber) {
+            alert("Bingo! Correct answer.");
+        } else if (userGuess + 1 === secretNumber) {
+            alert("Close enough to the correct answer.");
+        } else {
+            alert("Wrong guess, try again.");
+        }
+
+
+        var num = parseInt(prompt("Enter a number:"));
+        if (num % 3 === 0) {
+            alert(num + " is divisible by 3.");
+        } else {
+            alert(num + " is not divisible by 3.");
+        }
+
+        
+        var number = parseInt(prompt("Enter a number to check even or odd:"));
+        if (number % 2 === 0) {
+            alert(number + " is an even number.");
+        } else {
+            alert(number + " is an odd number.");
+        }
+
+        
+        var temperature = parseInt(prompt("Enter the temperature:"));
+
+        if (temperature > 40) {
+            alert("It is too hot outside.");
+        } else if (temperature > 30) {
+            alert("The Weather today is Normal.");
+        } else if (temperature > 20) {
+            alert("Today's Weather is cool.");
+        } else if (temperature > 10) {
+            alert("OMG! Today's weather is so cool.");
+        }
+
+        
+        var firstNumber = parseFloat(prompt("Enter first number:"));
+        var secondNumber = parseFloat(prompt("Enter second number:"));
+        var operation = prompt("Enter operation (+, -, *, /, %):");
+
+        var result;
+
+        if (operation === "+") {
+            result = firstNumber + secondNumber;
+        } else if (operation === "-") {
+            result = firstNumber - secondNumber;
+        } else if (operation === "*") {
+            result = firstNumber * secondNumber;
+        } else if (operation === "/") {
+            if (secondNumber !== 0) {
+                result = firstNumber / secondNumber;
+            } else {
+                result = "Cannot divide by zero!";
+            }
+        } else if (operation === "%") {
+            result = firstNumber % secondNumber;
+        } else {
+            result = "Invalid operation!";
+        }
+
+        alert("Result: " + result);
+
+    </script>
+
+</body>
+</html>
